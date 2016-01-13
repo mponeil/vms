@@ -1,0 +1,17 @@
+---
+ip: "192.168.10.11"
+memory: 2048
+cpus: 1
+provider: virtualbox
+
+authorize: ~/.ssh/id_rsa.pub
+
+keys:
+    - ~/.ssh/id_rsa
+
+folders:
+    - map: ~/Code/mpo/wecation
+      to: /home/www
+ports:
+    - send: 3000
+      to: 3000
